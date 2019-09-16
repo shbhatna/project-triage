@@ -29,7 +29,36 @@
 
   <div class="container">
     <div class="row">
-      <div id="mainContent" class="col-md">Registration form</div>
+      <div id="mainContent" class="col-md">Registration form
+        <div id="patientRecordApp">
+          Patient Name <br>
+          <form action="/action_page.php" method="post">
+  <input type="text" name="fname" required>
+  <input type="submit" value="Submit">
+</form>
+<table class="table">
+  <thead>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>DOB</th>
+    <th>SOB</th>
+      </thead>
+  <tbody>
+    <tr>{{ patient.firstName }}</tr>
+    <tr>{{ patient.lastName }}</tr>
+    <tr>{{ patient.sexAtBirth }}</tr>
+    <tr>{{ patient.dob }}</tr>
+  </tbody>
+</table>
+
+
+
+<p>If you click submit, without filling out the text field,
+your browser will display an error message.</p>
+      </div>
+
+      <div>
+
       <div id="patientWaitingApp" class="col-md-4 queueView">
         <div class="patientWaiting patient"
         :class="patient.priority + 'Priority'"
