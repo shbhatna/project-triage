@@ -33,23 +33,24 @@
     <div class="row">
       <div id="mainContent" class="col">
         <div id="patientRecordApp">
-          <form>
-            <div class="Form" @submit.prevent="handleCreateRecord">
+          <form @submit.prevent="handleCreateRecord">
+            <div class="Form">
+              <!---->
               <!--@submit is a shortcut for Event Handling-->
-              
+
               Patient Details
               <div class="row">
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="First name" v-model="formPatients.firstName">
+                  <input type="text" class="form-control" placeholder="First name" v-model="formPatient.firstName">
                 </div>
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="Last name" v-model="formPatients.lastName">
+                  <input type="text" class="form-control" placeholder="Last name" v-model="formPatient.lastName">
                 </div>
                 <div>
-                  <input type="date" class="form-control" placeholder="" v-model="formPatients.dob">
+                  <input type="date" class="form-control" placeholder="" v-model="formPatient.dob">
                 </div>
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="SOB" v-model="formPatients.SOB">
+                  <input type="text" class="form-control" placeholder="SOB" v-model="formPatient.sexAtBirth">
                 </div>
               </div>
 
