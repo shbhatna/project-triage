@@ -27,12 +27,37 @@
     </div>
   </nav>
 
+
+
   <div class="container">
     <div class="row">
       <div id="mainContent" class="col">
         <div id="patientRecordApp">
           <form>
-            
+            <div class="Form" @submit.prevent="handleCreateRecord">
+              <!--@submit is a shortcut for Event Handling-->
+              
+              Patient Details
+              <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="First name" v-model="formPatients.firstName">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Last name" v-model="formPatients.lastName">
+                </div>
+                <div>
+                  <input type="date" class="form-control" placeholder="" v-model="formPatients.dob">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="SOB" v-model="formPatients.SOB">
+                </div>
+              </div>
+
+            <center><input type="submit" value="Submit"></center><br>
+            </form>
+
+            <p>If you click submit, without filling out the text field,
+            your browser will display an error message.</p>
           </form>
           <table class="table table-sm table-hover">
             <thead>
