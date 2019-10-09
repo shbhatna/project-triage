@@ -6,11 +6,7 @@ var patientRecordsApp = new Vue({
   },
   methods: {
     fetchPatients() {
-<<<<<<< HEAD
       fetch('api/records/index.php')
-=======
-      fetch('api/records/')
->>>>>>> eda8fc222143ec2eba6c5235bf5e5646cbbe67b7
       .then(response => response.json())
       .then(json => { patientRecordsApp.patients = json })
     },
